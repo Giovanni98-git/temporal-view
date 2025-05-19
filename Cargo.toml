@@ -1,0 +1,30 @@
+[package]
+name = "executor"
+version = "0.1.0"
+edition = "2024"
+default-run = "main"
+
+[workspace]
+members = [".", "migration"]
+
+[dependencies]
+tokio = { version = "1.44.1", features = ["full"] }
+url = "2.5.2"
+serde = { version = "1.0", features = ["derive"] }
+prost-wkt-types = "0.6.0"
+env_logger = "0.10.0"
+dotenv = "0.15.0"
+log = "0.4.22"
+migration = { path = "migration" }
+temporal-client = { git = "https://github.com/temporalio/sdk-core", branch = "master", package = "temporal-client" }
+temporal-sdk = { git = "https://github.com/temporalio/sdk-core", branch = "master", package = "temporal-sdk" }
+temporal-sdk-core = { git = "https://github.com/temporalio/sdk-core", branch = "master", package = "temporal-sdk-core" } # need https://grpc.io/docs/protoc-installation/
+temporal-sdk-core-api = { git = "https://github.com/temporalio/sdk-core", branch = "master", package = "temporal-sdk-core-api"}
+temporal-sdk-core-protos = { git = "https://github.com/temporalio/sdk-core", branch = "master", package = "temporal-sdk-core-protos" }
+actix-web = "4.10.2"
+sea-orm = { version = "1.1.10" , features = [ "sqlx-sqlite", "runtime-tokio-rustls", "macros" ] }
+sea-orm-migration = "1.1.10"
+uuid = { version = "1.16.0" , features = ["v4", "fast-rng", "macro-diagnostics"] }
+serde_json = "1.0.140"
+actix-rt = "2.10.0"
+anyhow = "1.0.98"
