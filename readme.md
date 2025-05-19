@@ -1,7 +1,3 @@
-Voici une documentation concise et claire pour les testeurs de ton API, rédigée en français. Elle décrit les endpoints disponibles, leurs méthodes HTTP, les paramètres attendus et les réponses typiques.
-
----
-
 ## 📘 Documentation de l'API – Gestion des exécutions
 
 ### 🌐 URL de base
